@@ -34,7 +34,7 @@ public:
 
 std::vector<Command> getCommandsFromFile(std::string dataFile) {
 	std::vector<Command> commands;
-	std::cout << dataFile << std::endl;
+	std::cout << "Retrieved commands from " << dataFile << std::endl;
 	std::ifstream infile(dataFile);
 	std::string direction;
 	int distance;
