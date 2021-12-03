@@ -20,7 +20,6 @@ std::vector<std::string> getData (std::string fileName){
 	std::string a;
 	while (infile >> a) {
 		data.push_back(a);
-		//std::cout << a << std::endl;
 	}
 	return data;
 }
