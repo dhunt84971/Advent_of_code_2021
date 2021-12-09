@@ -6,7 +6,6 @@
 #include <vector>
 #include <cmath>
 
-
 std::vector <int> getData(std::string fileName){
 	std::vector <int> data;
 	std::cout << "Retrieved data from " << fileName << std::endl;
