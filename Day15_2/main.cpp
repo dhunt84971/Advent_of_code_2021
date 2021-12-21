@@ -45,7 +45,6 @@ std::vector<std::vector <int>> expandDataSet(std::vector<std::vector <int>> data
 	return expandedData;
 }
 
-
 void clear() {
     // CSI[2J clears screen, CSI[H moves the cursor to top-left corner
     std::cout << "\x1B[2J\x1B[H";
@@ -65,7 +64,7 @@ void displayGrid(std::vector<std::vector <int>> grid, std::string delimeter){
 
 void traverseGrid(std::vector<std::vector <int>> grid, std::vector<std::vector <int>> &risks, int traverse){
 	bool foundBetter = true;
-	while (foundBetter){
+	while (foundBetter){ // Keep looping to take advantage of any improved risks that were found from the previous iteration.
 		foundBetter = false;
 		for (size_t y {0}; y<grid.size(); y++){
 			int risk = risks[y][0];
@@ -159,7 +158,7 @@ int main(){
 	data = expandDataSet(data);
 	std::vector <int> zeroes(data[0].size(), 0);
 	std::vector<std::vector <int>> risks(data.size(), zeroes);
-	traverseGrid(data, risks, 1);
+	traverseGrid(data, risks, 1);  // A single traverse turned out to be all that was necessary.
 	std::cout << "The total risk = " << risks[data.size()-1][data[0].size()-1] << std::endl;
 	return 0;
 }
