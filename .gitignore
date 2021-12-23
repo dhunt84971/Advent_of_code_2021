@@ -1051,3 +1051,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Advent of Code
+instructions.txt
